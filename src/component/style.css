@@ -1,0 +1,27 @@
+.signup-wrapper{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to right,rgb(241, 206, 206),rgb(169, 180, 241));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.signup-box{
+    width: 70%;
+    height: 75vh;
+    background-color: #eee;
+    border-radius: 10px;
+    display: flex;
+    overflow: hidden;
+    /* box-shadow: 2px 2px 3px rgb(163, 232, 241); */
+}
+.signup-left-box{
+    height: 75vh;
+    width: 50%;
+    /* background-color: red; */
+}
+.signup-rigth-box{
+    height: 75vh;
+    width: 50%;
+    background-color: rgb(44, 10, 139);
+}
