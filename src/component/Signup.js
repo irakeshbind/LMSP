@@ -10,7 +10,18 @@ function Signup() {
                  <p>Learn Coding in Easy way ...</p>
             </div>
             <div className='signup-right-box'>
-
+            <h2>Create Your Account</h2>
+            {/* <hr/> */}
+            <input required placeholder='Full Name'/>
+            {/* <input required placeholder='About Me'/> */}
+            <textarea placeholder='About Me...' style={{ height:100, borderRadius:5, padding:10, fontSize:15,outline:'none'}}/>
+            <input required placeholder='higest qualification'/>
+            <input required type='email' placeholder='Experience'/>
+            <input required placeholder='Email'/>
+            <input required placeholder='phone'/>
+            <input required type='password' placeholder='Password'/>
+            <input required type='password' placeholder='ConfirmPassword'/>
+            <input className='submit-btn' type='submit'/>
             </div>
 
         </div>
