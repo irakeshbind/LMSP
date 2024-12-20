@@ -8,20 +8,29 @@
 }
 .signup-box{
     width: 70%;
-    height: 75vh;
+    height:75vh;
     background-color: #eee;
     border-radius: 10px;
     display: flex;
-    overflow: hidden;
-    /* box-shadow: 2px 2px 3px rgb(163, 232, 241); */
 }
 .signup-left-box{
-    height: 75vh;
+    height:75vh;
     width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
     /* background-color: red; */
 }
-.signup-rigth-box{
-    height: 75vh;
+.signup-right-box{
+    height:75vh;
     width: 50%;
-    background-color: rgb(44, 10, 139);
+    background-color: rgb(80, 7, 175);
+}
+.signup-left-box img{
+    width: 30%;
+}
+.signup-left-box h1{
+    color: #333;
 }
