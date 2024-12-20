@@ -21,7 +21,13 @@ function Signup() {
             <input required placeholder='phone'/>
             <input required type='password' placeholder='Password'/>
             <input required type='password' placeholder='ConfirmPassword'/>
+            {/* <input type='file' /> */}
+            <div className='upload-profile'>
+              <button className='upload-profile-btn'>upload profile pic</button>
+              <img alt='profile pic' src={require('./assets/po.jpg')}/>
+            </div>
             <input className='submit-btn' type='submit'/>
+           
             </div>
 
         </div>

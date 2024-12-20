@@ -45,7 +45,7 @@
     color: white;
 }
 .signup-right-box input{
-   padding: 10px;
+   padding: 5px;
    border-radius: 5px;
    border: none;
    outline: none;
@@ -62,4 +62,19 @@
     outline: none;
     color: white;
     cursor: pointer;
+}
+.upload-profile{
+    display: flex;
+    gap:10px
+}
+.upload-profile-btn{
+    border: none;
+    outline: none;
+    padding: 5px;
+    border-radius: 5px;
+}
+.upload-profile img{
+    height:40px;
+    width: 40px;
+    border-radius: 50%;
 }
