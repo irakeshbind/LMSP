@@ -1,13 +1,8 @@
 const express = require('express');
 const app = express();
 
-app.get('/signup',(req,res)=>{
-//     res.status(200).json({
-//         msg:'signup request'
+const authRoute =require('./routes/auth')
 
-// })
-console.log('hello')
-})
-
+app.use('/auth',authRoute)
 
 module.exports = app;
