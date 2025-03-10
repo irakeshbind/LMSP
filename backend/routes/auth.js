@@ -42,15 +42,6 @@ router.post('/userlogin',(req,res)=>{
         msg:'login request user'
 
 })
-
-
-
-
 })
-
-
-
-
-
 
 module.exports =router
