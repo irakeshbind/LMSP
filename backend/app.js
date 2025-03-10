@@ -1,25 +1,27 @@
 const express = require('express');
 const app = express();
-const authRoute = require('./routes/auth')
+const authRoute = require('./Routes/auth')
+const mongoose = require('mongoose');
 const bodyParser = require('body-parser')
-const mongoose = require('mongoose')
+const fileUpload = require('express-fileupload')
 
-const connectWithDatabase = async() => {
-    try {
+const connectWithDatabase = async()=>{
+    try{
         await mongoose.connect('mongodb+srv://rakesh:123@cluster0.lydcv.mongodb.net/')
-        console.log('Connected with databse')
+        console.log('connected with databases')
     }
-    catch (err) {
+    catch(err)
+    {
         console.log('databse is not connect')
     }
 }
 connectWithDatabase();
-
-  
-
-
-app.use('/auth', authRoute)
-app.use(bodyParser.urlencoded({ extended: false }))
+app.use(fileUpload({
+    useTempFiles : true,
+    
+}));
 app.use(bodyParser.json())
+app.use('/auth',authRoute)
+
 
 module.exports = app;
