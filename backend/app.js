@@ -7,6 +7,7 @@ const fileUpload = require('express-fileupload')
 
 const connectWithDatabase = async()=>{
     try{
+        // console.log(process.env.TOKEN_KEY)
         await mongoose.connect('mongodb+srv://rakesh:123@cluster0.lydcv.mongodb.net/')
         console.log('connected with databases')
     }
