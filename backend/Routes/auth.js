@@ -19,7 +19,7 @@ require('dotenv').config()
 
 router.post('/admin/sinup', async (req, res) => {
     try {
-        
+        // console.log('hellow')
         const users = await User.find({ email: req.body.email })
         if (users.length > 0) {
             return res.status(500).json({

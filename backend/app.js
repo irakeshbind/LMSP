@@ -4,7 +4,7 @@ const authRoute = require('./Routes/auth')
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser')
 const fileUpload = require('express-fileupload')
-
+const cors = require('cors')
 const connectWithDatabase = async()=>{
     try{
         // console.log(process.env.TOKEN_KEY)
@@ -17,11 +17,13 @@ const connectWithDatabase = async()=>{
     }
 }
 connectWithDatabase();
+app.use(cors())
 app.use(fileUpload({
     useTempFiles : true,
     
 }));
 app.use(bodyParser.json())
+
 app.use('/auth',authRoute)
 
 
