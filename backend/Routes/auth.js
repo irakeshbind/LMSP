@@ -63,13 +63,18 @@ router.post('/admin/login', async (req, res) => {
             })
         }
         const isvalid = await bcrypt.compare(req.body.password, users[0].password)
-        if (isvalid) {
-
-        } const token = jwt.sign({
+        if (!isvalid) {
+              return res.status(500).jons({
+                error:'invalid password'
+              })
+        } 
+        const token = await jwt.sign({
             _id: users[0]._id,
-            
             email: users[0].email,
-            password: users[0].password
+            phone:users[0].phone,
+            fullName:users[0].fullName,
+            password: users[0].password,
+            logoId:users[0].logoId
         },
             'sbs online classes 123', // Use env variable in production
             { expiresIn: '365d' });
@@ -77,6 +82,10 @@ router.post('/admin/login', async (req, res) => {
             _id: users[0]._id,
             fullName:users[0].fullName,
             email: users[0].email,
+            phone:users[0].phone,
+            fullName:users[0].fullName,
+            logoUrl:users[0].logoUrl,
+            logoId:users[0].logoId,
             password:token
         })
     }
